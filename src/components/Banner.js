@@ -19,7 +19,9 @@ export const Banner = ()=>{
         }, delta)
 
         return ()=>{ clearInterval(ticker)};
-    }, [text])
+    }, 
+    // [text]
+)
 
     const tick =() =>{
         let i= loopNum % toRotate.length;
@@ -53,10 +55,11 @@ export const Banner = ()=>{
                     <h1>{'Hi, I\'m Yvan'}<span className="wrap">{text}</span></h1>
                     <p>I'm an enthusiast developer working on both front-end and back-end projects</p>
                     <button onClick={()=> console.log('connect')}>Let's connect<ArrowRightCircle size={25}/></button>
-                    <img src={imgheader} alt="Headder img" />
 
                     </Col>
                     <Col xs={12} md={6} xl={5} >
+                    <img src={imgheader} alt="Headder img" />
+
                     </Col>
                 </Row>
             </Container>
